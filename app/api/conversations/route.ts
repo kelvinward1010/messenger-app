@@ -17,6 +17,7 @@ export async function POST(
             name
         } = body;
 
+
         if (!currentUser?.id || !currentUser?.email) {
             return new NextResponse('Unauthorized', { status: 400 });
         }
